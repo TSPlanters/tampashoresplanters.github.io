@@ -16,7 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Handmade Concrete Planters in Tampa, FL | Tampa Shores Planters</title>  <!-- EDIT: name -->
-<meta name="description" content="Handmade concrete planters in Tampa, Florida. Smooth-finish bowls and tall cylinder planters in natural light gray or custom colors. Local pickup and delivery.">
+<meta name="description" content="Handmade concrete planters in Tampa, Florida. Smooth-finish bowls, tall cylinder planters and fountain bowls in natural light gray or custom colors. Local pickup and delivery.">
 <link rel="canonical" href="https://www.yourdomain.com/">  <!-- EDIT -->
 <meta name="robots" content="index, follow">
 
@@ -64,7 +64,10 @@
     {"@type": "Product", "name": "Tall Concrete Cylinder Planter, Large (14\" x 27\")", "image": "https://www.yourdomain.com/tall-cylinders.jpg", "material": "Concrete",
      "offers": {"@type": "Offer", "price": "90", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "areaServed": "Tampa, FL"}},
     {"@type": "Product", "name": "Tall Concrete Cylinder Planter Pair", "image": "https://www.yourdomain.com/tall-cylinders.jpg", "material": "Concrete",
-     "offers": {"@type": "Offer", "price": "150", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "areaServed": "Tampa, FL"}}
+     "offers": {"@type": "Offer", "price": "150", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "areaServed": "Tampa, FL"}},
+    {"@type": "Product", "name": "Concrete Fountain Bowl (24\" x 11\")", "image": "https://www.yourdomain.com/fountain_bowl.jpg", "material": "Concrete",
+     "description": "Handmade concrete water feature bowl with a lunar gray exterior and sealed black interior. Made to order, about one week lead time.",
+     "offers": {"@type": "Offer", "price": "150", "priceCurrency": "USD", "availability": "https://schema.org/PreOrder", "areaServed": "Tampa, FL"}}
   ]
 }
 </script>
@@ -82,7 +85,9 @@
     {"@type": "Question", "name": "Do you deliver?",
      "acceptedAnswer": {"@type": "Answer", "text": "Yes, around the Tampa Bay area for a small fee. Delivery orders are paid in advance."}},
     {"@type": "Question", "name": "How heavy are they?",
-     "acceptedAnswer": {"@type": "Answer", "text": "The 15-inch bowl is an easy one-person carry. The 24-inch bowl and the tall cylinders are best moved with two people or a hand truck, which is exactly why they stay put in wind."}}
+     "acceptedAnswer": {"@type": "Answer", "text": "The 15-inch bowl is an easy one-person carry. The 24-inch bowl and the tall cylinders are best moved with two people or a hand truck, which is exactly why they stay put in wind."}},
+    {"@type": "Question", "name": "How long does a fountain bowl take?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Fountain bowls are made to order and take about a week, since the interior is sealed after casting. Call or text to get one started."}}
   ]
 }
 </script>
@@ -164,6 +169,30 @@
   .lineup img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: center 55%; }
   .lineup p { font-size: 0.92rem; color: #5b5c57; margin: 12px 0 0; }
 
+  .fountains { border-top: 1px solid var(--stone); }
+  .fountains .gallery { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: clamp(12px, 2vw, 24px); }
+  .fountains .gallery figure { margin: 0; background: var(--limewash); overflow: hidden; }
+  .fountains .gallery figure img { width: 100%; height: 100%; object-fit: cover; }
+  .fountains .gallery figure:first-child { grid-row: 1 / 3; aspect-ratio: 4 / 3; }
+  .fountains .gallery figure:not(:first-child) { aspect-ratio: 4 / 3; }
+  @media (max-width: 640px) {
+    .fountains .gallery { grid-template-columns: 1fr; grid-template-rows: auto; }
+    .fountains .gallery figure:first-child { grid-row: auto; }
+  }
+  .fountains .details { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 80px); align-items: start; margin-top: clamp(32px, 5vw, 64px); }
+  @media (max-width: 800px) { .fountains .details { grid-template-columns: 1fr; } }
+  .fountains .details h3 { font-size: 2rem; }
+  .fountains .details p { margin-top: 18px; }
+  .fountains .specs { width: 100%; border-collapse: collapse; font-size: 1rem; }
+  .fountains .specs th, .fountains .specs td { text-align: left; padding: 12px 0; border-top: 1px solid var(--stone); font-weight: 400; vertical-align: top; }
+  .fountains .specs th { color: #5b5c57; font-size: 0.88rem; width: 34%; padding-right: 16px; }
+  .fountains .specs tr:last-child th, .fountains .specs tr:last-child td { border-bottom: 1px solid var(--stone); }
+  .fountains .specs td.price { font-family: var(--serif); font-size: 1.6rem; line-height: 1; }
+  .fountains .swatches { display: flex; gap: 10px; align-items: center; margin-top: 8px; font-size: 0.9rem; color: #5b5c57; }
+  .fountains .swatch { width: 18px; height: 18px; border-radius: 50%; border: 1px solid var(--stone); flex-shrink: 0; }
+  .fountains .swatch.lunar { background: #B7B6B0; }
+  .fountains .swatch.black { background: #1B1B19; }
+
   .craft { background: var(--graphite); color: var(--plaster); }
   .craft h2 { color: var(--limewash); }
   .craft .cols { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 80px); }
@@ -204,6 +233,7 @@
   <nav aria-label="Main">
     <ul>
       <li><a href="#planters">Planters</a></li>
+      <li><a href="#fountains">Fountains</a></li>
       <li><a href="#craft">Craft</a></li>
       <li><a href="#care">Care</a></li>
       <li><a href="#faq">FAQ</a></li>
@@ -217,7 +247,7 @@
   <section class="hero wrap">
     <div>
       <h1>Concrete planters,<br>cast by hand<br>in <em>Tampa.</em></h1>
-      <p class="lede">Smooth-finish bowls and tall cylinders made in small batches for Florida patios, pool decks and entryways. Heavy enough to ride out a storm, quiet enough to let the plant be the point.</p>
+      <p class="lede">Smooth-finish bowls, tall cylinders and fountain bowls made in small batches for Florida patios, pool decks and entryways. Heavy enough to ride out a storm, quiet enough to let the plant be the point.</p>
       <a class="btn" href="#planters">See the planters</a>
       <a class="btn ghost" href="tel:+18137842121">Call or text 813-784-2121</a>
     </div>
@@ -274,6 +304,37 @@
     </div>
   </section>
 
+  <section id="fountains" class="fountains wrap">
+    <div class="section-head">
+      <h2>Fountain bowls</h2>
+      <p>The large bowl, reworked for water. A lunar gray exterior with a sealed black interior that keeps the surface dark and mirror-still, so the sound and the reflection do the work.</p>
+    </div>
+
+    <div class="gallery">
+      <figure><img src="fountain_bowl.jpg" alt="Concrete fountain bowl with lunar gray exterior and black sealed interior, filled with water" loading="lazy" width="1200" height="900"></figure>
+      <figure><img src="fountain_bowl2.jpg" alt="Close view of the sealed black interior of a concrete fountain bowl" loading="lazy" width="1200" height="900"></figure>
+      <figure><img src="fountain_bowl3.jpg" alt="Concrete fountain bowl set on a patio beside plants" loading="lazy" width="1200" height="900"></figure>
+    </div>
+
+    <div class="details">
+      <div>
+        <h3>A water feature you can carry to the patio</h3>
+        <p>Cast in the same 24-inch bowl mold as the planters, with a dark sealed interior instead of a drainage hole. Fill it, add a small pump, and it becomes a quiet basin for a pool deck, entryway or shaded corner of the lanai. The weight keeps it steady, and the sealed bowl holds water without weeping through the concrete.</p>
+        <p>Each fountain bowl is made to order. Allow about a week for casting, curing and sealing.</p>
+        <a class="btn" href="#contact">Order a fountain bowl</a>
+      </div>
+      <table class="specs">
+        <tbody>
+          <tr><th scope="row">Size</th><td>24" across, 11" tall</td></tr>
+          <tr><th scope="row">Finish</th><td>Lunar gray exterior, black sealed interior
+            <div class="swatches"><span class="swatch lunar" aria-hidden="true"></span>lunar gray<span class="swatch black" aria-hidden="true"></span>sealed black</div></td></tr>
+          <tr><th scope="row">Lead time</th><td>About one week, made to order</td></tr>
+          <tr><th scope="row">Price</th><td class="price">$150</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
   <section id="craft" class="craft wrap">
     <div class="cols">
       <div>
@@ -322,6 +383,7 @@
     <details><summary>How do I buy one?</summary><p>Call or text 813-784-2121, or message us on Facebook Marketplace. We will confirm what is in stock and arrange pickup in Tampa or local delivery. No online checkout, no shipping.</p></details>
     <details><summary>Do you deliver?</summary><p>Yes, around the Tampa Bay area for a small fee. Delivery orders are paid in advance.</p></details>
     <details><summary>How heavy are they?</summary><p>The 15-inch bowl is an easy one-person carry. The 24-inch bowl and the tall cylinders are best moved with two people or a hand truck, which is exactly why they stay put in wind.</p></details>
+    <details><summary>How long does a fountain bowl take?</summary><p>Fountain bowls are made to order and take about a week, since the interior is sealed after casting. Call or text to get one started.</p></details>
   </section>
 
   <section id="contact" class="contact wrap">
@@ -345,7 +407,7 @@
 
 <footer>
   <span>© 2026 Tampa Shores Planters. Handmade in Tampa, FL.</span>   <!-- EDIT -->
-  <span>Concrete planters · bowls · tall cylinders · custom colors </span>
+  <span>Concrete planters · bowls · tall cylinders · fountain bowls · custom colors</span>
 </footer>
 </body>
 </html>
